@@ -23,8 +23,8 @@ function iniciar(){
 		var profesorCount,lastCount,previa;
 
 		var puntaje = Crafty.e("2D, DOM, Text")
-			.attr({x: 20, y: 20, w: 350, h: 50})
-			.text("Puntuación: 0 - ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+			.attr({x: 20, y: 20, w: 450, h: 50})
+			.text("Puntuación: 0 - |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| - Dif: 1")
 			.textFont({family: "Consolas", size: "14px", weight: "semibold"})
 			.css({color: "#FFFFFF"});
 
@@ -57,7 +57,7 @@ function iniciar(){
 				for (i = 0; i < this.vida; i++)
 					hp += "|";
 
-				puntaje.text("Puntuación: " + player.puntaje + " - " + hp);
+				puntaje.text("Puntuación: " + player.puntaje + " - " + hp + " - Dif: " + Math.floor(previa));
 
 				if(profesorCount <= 0) {
 					nuevosProfesores(lastCount, lastCount + 1, previa);
@@ -94,7 +94,7 @@ function iniciar(){
 			var profesores = Crafty.math.randomInt(lower, upper);
 			var buenos = 0;
 			previa = prev;
-			var spd = previa + 0.25;
+			var spd = previa + 0.35;
 
 			for(var i = 0; i < profesores; i++) {
 				if (Crafty.math.randomInt(1, 2) % 2 == 0){
@@ -112,6 +112,6 @@ function iniciar(){
 
 		}
 		
-		nuevosProfesores(5, 10, 1);
+		nuevosProfesores(5, 10, 2);
 	});
 }
