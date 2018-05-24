@@ -1,0 +1,27 @@
+body{
+	background-color: #B3B1B2;
+}
+.dialogo{
+	background-color: #DDDDDD;
+	border: 3px solid black;
+	font-family: Arial;
+	text-align: center;
+	width: 80%
+}
+.rotulo{
+	display: inline-block;
+	border: 3px solid red;
+	font-family: Impact;
+	width: 20%;
+}
+.campo{
+	display: inline-block;
+	border: 3px solid blue;
+	font-family: Arial;
+	width: 50%;
+}
+.entrada{
+	border: 3px solid green;
+	font-family: Impact;
+	width: 100%;
+}
